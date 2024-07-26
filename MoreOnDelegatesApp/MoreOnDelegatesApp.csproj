@@ -5,7 +5,13 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>MoreOnDelegatesApp.WorkingWithList</StartupObject>
+    <StartupObject>MoreOnDelegatesApp.WorkingWithObjects</StartupObject>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="LibraryForGenerics">
+      <HintPath>D:\AllDemos\HRB\GenericsDemo_HRB\LibraryForGenerics\bin\Debug\net6.0\LibraryForGenerics.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 
 </Project>

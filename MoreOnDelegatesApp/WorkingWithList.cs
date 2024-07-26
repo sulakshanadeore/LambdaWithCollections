@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Channels;
 using System.Threading.Tasks;
+using LibraryForGenerics;
 
 namespace MoreOnDelegatesApp
 {
@@ -11,25 +12,38 @@ namespace MoreOnDelegatesApp
     {
         static void Main(string[] args)
         {
+            List<string> strlist = new List<string>();
+            strlist.Add("Hello");
+            strlist.Add("Hello World");
+            strlist.Add("Hello Bye");
+            strlist.Add("Good day");
 
-            List<int> list = new List<int>();
-            list.Add(11);
-            list.Add(2);
-            list.Add(310);    
-            list.Add(41);
-            list.Add(5);
-
-            //function lambda
-            List<int> ordered = list.OrderBy(e => e).ToList();
-            ordered.ForEach(e => Console.WriteLine(e));
-
-            
+            string s=strlist.Find(e => e.Length == 5);
+            Console.WriteLine(s);
 
 
 
-            //Predicate Lambda
+
+
+            //List<int> list = new List<int>();
+            //list.Add(11);
+            //list.Add(2);
+            //list.Add(310);    
+            //list.Add(41);
+            //list.Add(5);
+
+            ////function lambda
+            //List<int> ordered = list.OrderBy(e => e).ToList();
+
+            //ordered.ForEach(e => Console.WriteLine(e));
+
+
+
+
+
+            ////Predicate Lambda
             // int firstOccurence=list.Find(e=>e%2!=0);
-            // Console.WriteLine(firstOccurence);
+            //// Console.WriteLine(firstOccurence);
 
 
             //Predicate Lambda
@@ -42,7 +56,7 @@ namespace MoreOnDelegatesApp
             //{
             //    Console.WriteLine(item);
             //}
-            
+
 
 
 
