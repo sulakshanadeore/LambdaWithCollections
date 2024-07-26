@@ -62,6 +62,8 @@ namespace MoreOnDelegatesApp
        }
       static void Main(string[] args)
         {
+            InitialiseData();
+
            Console.WriteLine("1. Find 2.Add 3.Delete 4.ShowList 5.FindAll Having Same Basic Sal");
             int c=Convert.ToInt32(Console.ReadLine());
             switch (c)
@@ -69,7 +71,10 @@ namespace MoreOnDelegatesApp
                 case 1:
                     Console.WriteLine("Enter the employee id to find the employee");
                     int empid=Convert.ToInt32(Console.ReadLine());
-                    FindEmployee(empid);
+                    Employee emp1=FindEmployee(empid);
+                    Console.WriteLine(emp1.Empid);
+                    Console.WriteLine(emp1.EmpName);
+                    Console.WriteLine(emp1.BasicSal);
                     break;
                 case 2:
                     Console.WriteLine("Enter emp id");
@@ -122,7 +127,7 @@ namespace MoreOnDelegatesApp
             }
 
 
-
+            Console.ReadLine();
         }
     }
 }
